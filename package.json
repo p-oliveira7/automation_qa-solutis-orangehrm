@@ -1,0 +1,22 @@
+{
+  "name": "automation_qa-solutis-orangehrm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/p-oliveira7/automation_qa-solutis-orangehrm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/p-oliveira7/automation_qa-solutis-orangehrm/issues"
+  },
+  "homepage": "https://github.com/p-oliveira7/automation_qa-solutis-orangehrm#readme",
+  "dependencies": {
+    "cypress": "^13.3.1"
+  }
+}
