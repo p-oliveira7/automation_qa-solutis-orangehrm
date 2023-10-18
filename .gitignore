@@ -4,3 +4,4 @@
 .env
 /cypress/results
 /public
+cypress.env.json

@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/p-oliveira7/automation_qa-solutis-orangehrm.git"
   },
-  "author": "",
+  "author": "Paulo Oliveira",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/p-oliveira7/automation_qa-solutis-orangehrm/issues"
