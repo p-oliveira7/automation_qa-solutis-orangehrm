@@ -4,19 +4,29 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run",
+    "report:merge": "mochawesome-merge cypress/results/json/* > index.json",
+    "report:generate": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/p-oliveira7/automation_qa-solutis-orangehrm.git"
   },
-  "author": "",
+  "author": "Paulo Oliveira",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/p-oliveira7/automation_qa-solutis-orangehrm/issues"
   },
   "homepage": "https://github.com/p-oliveira7/automation_qa-solutis-orangehrm#readme",
-  "dependencies": {
-    "cypress": "^13.3.1"
+  "devDependencies": {
+    "@faker-js/faker": "^8.2.0",
+    "cypress": "^13.3.1",
+    "cypress-file-upload": "^5.0.8",
+    "dotenv": "^16.3.1",
+    "mochawesome-report-generator": "^6.2.0",
+    "cypress-multi-reporters": "^1.6.3",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0"
   }
 }
