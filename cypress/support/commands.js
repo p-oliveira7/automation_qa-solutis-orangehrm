@@ -33,6 +33,7 @@ Cypress.Commands.add('login', (username, password) => {
 Cypress.Commands.add('clickInMainMenu', (label) => {
     cy.get('.oxd-main-menu-item').contains(label).click();
 });
+
 /**
  * Dados pessoais do funcionário.
  * {String} firstName
@@ -118,8 +119,9 @@ Cypress.Commands.add('searchEmployee', (person) => {
     .should('be.visible')
     .click();
 
-    cy.wait('@getEmployees')
-    // Verifica se o card contém o nome e id correspondente com o da pessoa cadastrada
+    cy.wait('@getEmployees');
+
+    // Encontra a linha que possui as informações do funconário
     cy.get('.orangehrm-container .oxd-table-card .oxd-table-row').each((row) => {
         cy.wrap(row).within(() => {
 
