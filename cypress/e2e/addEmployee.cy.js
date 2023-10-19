@@ -4,8 +4,6 @@ const username = Cypress.env("ORANGE_USERNAME");
 const password = Cypress.env("ORANGE_PASSWORD");
 let person;
 
-
-
 describe('Cadastro de um novo funcionário', () => {
 
   beforeEach(() => {
@@ -19,6 +17,7 @@ describe('Cadastro de um novo funcionário', () => {
 
     cy.login(username, password);
   });
+  
   it('Deve adicionar um funcionário e validar mensagem de sucesso', () => {
     // Preenche os campos de nome e id do funcionário
     cy.fillNewEmployeeForm(person);
