@@ -37,7 +37,7 @@ describe('Cadastro de um novo funcionário', () => {
     cy.validateEmployeeDetails(person);
   });
 
-  it('Deve adiciona um funcionario e validar os detalhes pela lista de funcionários', () => {
+  it('Deve adicionar um funcionário e validar os detalhes pela lista de funcionários', () => {
     
     // Preenche os campos de nome e id do funcionário
     cy.fillNewEmployeeForm(person);
