@@ -33,7 +33,7 @@ When(/^preencho o formulário Novo Colaborador com dados válidos$/, () => {
   page.fillNewEmployeeForm(person);
 });
 
-Then(/^devo ser capaz de validar os detalhes do Colaborador$/, () => {
+Then(/^os detalhes do Colaborador devem ser exibidos corretamente$/, () => {
   page.validateEmployeeDetails(person);
 });
 
@@ -42,7 +42,7 @@ When(/^pesquiso pelo Colaborador$/, () => {
   page.searchEmployee(person);
 });
 
-Then(/^devo ser capaz de validar os dados do Colaborador na tabela$/, () => {
+Then(/^os detalhes do Colaborador devem ser exibidos corretamente na tabela$/, () => {
   page.validateEmployeeInTable(person);
   page.validateEmployeeDetails(person);
 });
