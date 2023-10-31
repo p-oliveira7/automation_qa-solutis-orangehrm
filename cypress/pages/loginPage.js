@@ -7,10 +7,14 @@ class LoginPage {
     }
 
     loginSubmit = (username, password) => {
-        cy.get(loginElements.usernameField()).should('exist').type(username, {log: false});
-        cy.get(loginElements.passwordField()).should('exist').type(password, {log: false});
-        cy.get(loginElements.loginButton()).contains('Login').click();
-    }
+        cy.session(`${username}`, () => {
+          cy.visit('/');
+          cy.get(loginElements.usernameField()).should('exist').type(username, { log: false });
+          cy.get(loginElements.passwordField()).should('exist').type(password, { log: false });
+          cy.get(loginElements.loginButton()).contains('Login').click();
+        });
+        cy.visit('/');
+      }
 
     validateLoginSucessfull = () => {
         cy.get(loginElements.profilePicture()).should('be.visible').should('have.attr', 'alt', 'profile picture');

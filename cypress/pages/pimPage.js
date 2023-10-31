@@ -47,15 +47,15 @@ class pimPage {
             cy.wrap(row).within(() => {
                 cy.get(el.idCell()).as('idCell');
                 cy.get('@idCell')
-                .should('contain', person.id);
+                .should('have.text', person.id);
 
                 cy.get(el.nameCell()).as('nameCell');
                 cy.get('@nameCell')
-                .should('contain', `${person.firstName} ${person.middleName}`);
+                .should('have.text', `${person.firstName} ${person.middleName}`);
 
                 cy.get(el.lastNameCell()).as('lastNameCell');
                 cy.get('@lastNameCell')
-                .should('contain', person.lastName);
+                .should('have.text', person.lastName);
             });
 
             cy.wrap(row).click();
@@ -72,6 +72,7 @@ class pimPage {
     }
 
     accessEmployeeList = () => {
+        cy.get(el.addEmployeeMenuOption()).contains('Employee List').click()
         cy.get(el.employeeListText()).should('have.text', 'Employee Information');
     }
 }
