@@ -15,7 +15,7 @@ jobs:
           ORANGE_USERNAME: ${{secrets.ORANGE_USERNAME}}
           ORANGE_PASSWORD: ${{secrets.ORANGE_PASSWORD}}
       - name: Generate report
-        run: npm run
+        run: npm run generate-report
       - name: Deploy reports page
         uses: peaceiris/actions-gh-pages@v3
         with:
