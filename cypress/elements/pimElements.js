@@ -15,9 +15,9 @@ class pimElements{
     lastNameCell = () => '.oxd-table-cell:eq(3)';
     tableRow = () => '.orangehrm-container .oxd-table-card .oxd-table-row';
     topbarText = () => '.oxd-topbar-header-breadcrumb > .oxd-text';
-    addEmployeeMenuOption = () => '.oxd-topbar-body-nav';
-    addEmployeeCardText = () => '.orangehrm-card-container > .oxd-text--h6:contains("Add Employee")';
-    employeeListText = () => '.oxd-table-filter-header-title > .oxd-text:contains("Employee Information")';
+    pimMenuOption = () => '.oxd-topbar-body-nav';
+    addEmployeeCardText = () => '.orangehrm-card-container > .oxd-text--h6';
+    employeeListText = () => '.oxd-table-filter-header-title > .oxd-text';
 }
 
 export default pimElements;

@@ -2,10 +2,6 @@ import PimElements from '../elements/pimElements';
 const el = new PimElements();
 
 class pimPage {
-    visitEmployeePage() {
-        cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/pim/addEmployee');
-    }
-
     fillNewEmployeeForm = (person) => {
         cy.get(el.firstName()).should('be.visible').type(person.firstName);
         cy.get(el.middleName()).should('be.visible').type(person.middleName);
@@ -13,7 +9,7 @@ class pimPage {
         cy.get(el.employeeId()).should('be.visible').clear().type(person.id);
         cy.get(el.fileInput()).selectFile(person.image, {force: true});
         cy.get(el.saveButton()).contains('Save').click();
-        cy.get(el.toastMessage()).should('be.visible').contains('Successfully Saved');
+        cy.get(el.toastMessage()).should('be.visible').should('include.text', 'Successfully Saved');
     }
 
     validateEmployeeDetails = (person) => {
@@ -25,7 +21,6 @@ class pimPage {
     }
 
     searchEmployee = (person) => {
-        cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList');
         cy.intercept({
             method: 'GET',
             url: '/web/index.php/api/v2/pim/employees*includeEmployees=onlyCurrent',
@@ -61,18 +56,19 @@ class pimPage {
             cy.wrap(row).click();
         });
     }
+
     accessPIM = () => {
         cy.get(el.mainMenu()).contains('PIM').click();
         cy.get(el.topbarText()).should('have.text', 'PIM');
     }
 
     accessAddEmployee = () => {
-        cy.get(el.addEmployeeMenuOption()).contains('Add Employee').click();
+        cy.get(el.pimMenuOption()).contains('Add Employee').click();
         cy.get(el.addEmployeeCardText()).should('have.text', 'Add Employee');
     }
 
     accessEmployeeList = () => {
-        cy.get(el.addEmployeeMenuOption()).contains('Employee List').click()
+        cy.get(el.pimMenuOption()).contains('Employee List').click()
         cy.get(el.employeeListText()).should('have.text', 'Employee Information');
     }
 }
