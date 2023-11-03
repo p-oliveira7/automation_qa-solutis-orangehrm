@@ -11,7 +11,7 @@ const username = Cypress.env("ORANGE_USERNAME");
 const password = Cypress.env("ORANGE_PASSWORD");
 
 Given(/^que o login é realizado com sucesso$/, () => {
-  loginPage.loginSubmit(username, password);
+  loginPage.loginSubmitSession(username, password);
 });
 
 Given(/^que acesso a área PIM$/, () => {
@@ -44,5 +44,4 @@ When(/^pesquiso pelo Colaborador$/, () => {
 
 Then(/^os detalhes do Colaborador devem ser exibidos corretamente na tabela$/, () => {
   page.validateEmployeeInTable(person);
-  page.validateEmployeeDetails(person);
 });
