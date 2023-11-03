@@ -16,3 +16,8 @@ Feature: Personal Information Management
     Given que um novo Colaborador é cadastrado com sucesso
     When pesquiso pelo Colaborador
     Then os detalhes do Colaborador devem ser exibidos corretamente na tabela
+
+  @Positivo @smokeTest
+  Scenario: Validar listagem de colaboradores
+        When acesso o menu de colaboradores
+        Then colaboradores são listados com sucesso

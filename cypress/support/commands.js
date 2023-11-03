@@ -4,5 +4,4 @@ Cypress.Commands.add('optionalType', { prevSubject: 'element' }, (element, value
     } else {
       cy.wrap(element).type(value);
     }
-  });
-  
+});

@@ -1,0 +1,118 @@
+{
+  "data": [
+    {
+      "empNumber": 1512,
+      "lastName": "Melo",
+      "firstName": "Ândrea",
+      "middleName": "Paula",
+      "employeeId": "7ktgni",
+      "terminationId": null,
+      "jobTitle": {
+        "id": null,
+        "title": null,
+        "isDeleted": null
+      },
+      "subunit": {
+        "id": null,
+        "name": null
+      },
+      "empStatus": {
+        "id": null,
+        "name": null
+      },
+      "supervisors": []
+    },
+    {
+      "empNumber": 85028,
+      "lastName": "Silva",
+      "firstName": "Siniti",
+      "middleName": "Catarina",
+      "employeeId": "u0jmmb",
+      "terminationId": null,
+      "jobTitle": {
+        "id": null,
+        "title": null,
+        "isDeleted": null
+      },
+      "subunit": {
+        "id": null,
+        "name": null
+      },
+      "empStatus": {
+        "id": null,
+        "name": null
+      },
+      "supervisors": []
+    },
+    {
+      "empNumber": 26573,
+      "lastName": "Batista",
+      "firstName": "Celly",
+      "middleName": "Robério",
+      "employeeId": "q9rq90",
+      "terminationId": null,
+      "jobTitle": {
+        "id": null,
+        "title": null,
+        "isDeleted": null
+      },
+      "subunit": {
+        "id": null,
+        "name": null
+      },
+      "empStatus": {
+        "id": null,
+        "name": null
+      },
+      "supervisors": []
+    },
+    {
+      "empNumber": 85602,
+      "lastName": "Albuquerque",
+      "firstName": "Norival",
+      "middleName": "Aroldo",
+      "employeeId": "wkl3iw",
+      "terminationId": null,
+      "jobTitle": {
+        "id": null,
+        "title": null,
+        "isDeleted": null
+      },
+      "subunit": {
+        "id": null,
+        "name": null
+      },
+      "empStatus": {
+        "id": null,
+        "name": null
+      },
+      "supervisors": []
+    },
+    {
+      "empNumber": 62543,
+      "lastName": "Macedo",
+      "firstName": "Jardel",
+      "middleName": "Jordelio",
+      "employeeId": "w6voy3",
+      "terminationId": null,
+      "jobTitle": {
+        "id": null,
+        "title": null,
+        "isDeleted": null
+      },
+      "subunit": {
+        "id": null,
+        "name": null
+      },
+      "empStatus": {
+        "id": null,
+        "name": null
+      },
+      "supervisors": []
+    }
+  ],
+  "meta": {
+    "total": 5
+  },
+  "rels": []
+}

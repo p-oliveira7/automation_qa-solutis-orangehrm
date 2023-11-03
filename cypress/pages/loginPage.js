@@ -17,7 +17,7 @@ class LoginPage {
     loginSubmit = (username, password) =>{
       cy.get(loginElements.usernameField()).should('exist').optionalType(username);
       cy.get(loginElements.passwordField()).should('exist').optionalType(password);
-      cy.get(loginElements.loginButton()).contains('Login').click();
+      cy.get(loginElements.loginButton()).click();
     }
 
     validateLoginSucessfull = () => {

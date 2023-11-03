@@ -5,7 +5,7 @@ import LoginPage from '../pages/loginPage';
 
 const page = new pimPage();
 const loginPage = new LoginPage
-let person = new Person();
+let person = new Person.createRandomPerson;
 
 const username = Cypress.env("ORANGE_USERNAME");
 const password = Cypress.env("ORANGE_PASSWORD");
@@ -23,7 +23,7 @@ Given(/^acesso a área Adicionar Colaborador$/, () => {
 });
 
 Given(/^que um novo Colaborador é cadastrado com sucesso$/, () => {
-  person = new Person();
+  person = new Person.createRandomPerson();
   page.accessPIM();
   page.accessAddEmployee();
   page.fillNewEmployeeForm(person);
@@ -38,10 +38,19 @@ Then(/^os detalhes do Colaborador devem ser exibidos corretamente$/, () => {
 });
 
 When(/^pesquiso pelo Colaborador$/, () => {
-  page.accessEmployeeList();
+  page.visitEmployeeList();
   page.searchEmployee(person);
 });
 
 Then(/^os detalhes do Colaborador devem ser exibidos corretamente na tabela$/, () => {
-  page.validateEmployeeInTable(person);
+  page.validateEmployeesInTable(person);
+});
+
+When(/^acesso o menu de colaboradores$/, () => {
+  page.visitEmployeeList();
+  page.mockGetList();
+});
+
+Then(/^colaboradores são listados com sucesso$/, () => {
+	page.waitGetListValidateData();
 });
