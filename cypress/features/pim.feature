@@ -1,7 +1,7 @@
 # language: en
 
 Feature: Personal Information Management
-  Background: realizar o login
+  Background: Realizar o login
     Given que o login é realizado com sucesso
 
   @Positivo @smokeTest
