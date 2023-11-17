@@ -17,6 +17,7 @@ Projeto de automação de testes End-to-End (E2E) utilizando Cypress, Cucumber, 
 ## Estrutura de Pastas
 Este projeto segue uma estrutura organizada de pastas dentro do diretório `cypress`:
 
+- **steps**: Contém os arquivos de step que vinculam a  escrita gherkin com o cypress.
 - **features**: Contém os arquivos de especificação Gherkin para os testes.
 - **fixtures**: Armazena dados de teste ou massa de dados para serem utilizados nos testes.
 - **page**: Contém classes responsáveis pelos métodos com a lógica de teste, organizadas por funcionalidade.
