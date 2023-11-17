@@ -32,9 +32,9 @@ Este projeto segue uma estrutura organizada de pastas dentro do diretório `cypr
 1. [VSCode](https://code.visualstudio.com/)
 2. [Node.js](https://nodejs.org/)
 
-# Configuração
+## Configuração
 
-## Clonar o Repositório
+### Clonar o Repositório
 ```bash
 git clone https://github.com/p-oliveira7/automation_qa-solutis-orangehrm.git
 cd automation_qa-solutis-orangehrm
@@ -43,17 +43,18 @@ cd automation_qa-solutis-orangehrm
 ```bash
 npm i
 ```
+# Scripts
 ### Executar os Testes
 - Abra o Cypress (modo interativo):
 ```bash
 npx cypress open
 ```
-## Executar os testes em modo headless e gerar o relatório:
+### Executar os testes em modo headless e gerar o relatório:
 
 ```bash
 npx cypress run
 ```
-## Gerar Relatório
+### Gerar Relatório
 
 ```bash
 npm run report:merge
